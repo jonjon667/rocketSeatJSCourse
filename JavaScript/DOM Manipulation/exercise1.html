@@ -7,6 +7,17 @@
             <button name = 'btnBox'>Make box</button>
         </div>
         <script>
+            function getRandomColor() {  
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {    
+                    color += letters[Math.floor(Math.random() * 16)];
+                    }  
+                return color;
+            }
+            function changeColor(){
+                this.style.backgroundColor = getRandomColor()
+            }
             function makeBox(){
                 var container = document.querySelector('div[id = app]');
                 var box = document.createElement('div');
@@ -14,6 +25,7 @@
                 box.style.width = 100;
                 box.style.height = 100;
                 box.style.backgroundColor = '#f00';
+                box.onmouseover = changeColor
                 container.appendChild(box);
             }
             btnBox = document.querySelector('button[name = btnBox]');
