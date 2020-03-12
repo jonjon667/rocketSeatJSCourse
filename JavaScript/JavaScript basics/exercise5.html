@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Exercise 5</title>
+    </head>
+    <body>
+        <div id = "app">
+        </div>
+        <script>
+        var usuarios = [
+            {nome: "Diego",
+            habilidades: ["Javascript", "ReactJS", "Redux"]},
+            {nome: "Gabriel",
+            habilidades: ["VueJS", "Ruby on Rails", "Elixir"]}
+            ];
+        for (user of usuarios){
+            var frase = 'O ' + user.nome + ' possui as hablidades: '
+            frase += user.habilidades.join(', ')
+            console.log(frase)
+        }
+        </script>
+    </body>
+</html>
