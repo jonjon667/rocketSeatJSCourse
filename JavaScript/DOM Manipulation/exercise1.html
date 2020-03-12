@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Exercise 1</title>
+    </head>
+    <body>
+        <div id = "app">
+            <button name = 'btnBox'>Make box</button>
+        </div>
+        <script>
+            function makeBox(){
+                var container = document.querySelector('div[id = app]');
+                var box = document.createElement('div');
+                box.setAttribute('class', 'box');
+                box.style.width = 100;
+                box.style.height = 100;
+                box.style.backgroundColor = '#f00';
+                container.appendChild(box);
+            }
+            btnBox = document.querySelector('button[name = btnBox]');
+            btnBox.onclick = makeBox;
+        </script>
+    </body>
+</html>
