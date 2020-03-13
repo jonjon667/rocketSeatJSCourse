@@ -1,18 +1,22 @@
 <html>
     <head>
-        <title>Exercise 3</title>
+        <title>Exercise 3/4</title>
     </head>
     <body>
         <div id = "app">
+            <input type="text" name="nome">
+            <button onClick="adicionar()">Adicionar</button>
         </div>
         <script>
-            var nomes = ["Diego", "Gabriel", "Lucas"];
+            var input = document.querySelector('input[name=nome]')
             var container = document.querySelector('div[id=app]')
             var list = document.createElement('ul')
             container.appendChild(list)
-            for (name of nomes){
+            function adicionar(){
+                var texto = input.value
+                input.value = null
                 listItem = document.createElement('li')
-                listItem.appendChild(document.createTextNode(name))
+                listItem.appendChild(document.createTextNode(texto))
                 list.appendChild(listItem)
             }
         </script>
